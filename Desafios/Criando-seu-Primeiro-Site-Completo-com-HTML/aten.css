@@ -1,0 +1,7 @@
+table {
+	border: 1px solid black;
+	margin: auto;
+	width: 600px;
+	word-spacing: 10px;
+	grid-column: 1 / 3;
+}
