@@ -1,0 +1,161 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	background-color: #121212;
+	color: white;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.banner-content {
+	background-image: url("../images/banner-blur.jpg");
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px ridge #539bf5;
+}
+
+.logo {
+	width: 50vh;
+	margin: auto;
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+.banner-content h1 {
+	font-size: 6.2vh;
+	margin: auto;
+	color: white;
+	box-shadow: 10px 10px 100px black;
+	padding-left: 20px;
+	border-radius: 50px 10px 50px 10px;
+	width: 63vh;
+}
+
+.banner-content p {
+	text-shadow: 0.1em 0.01em #111111;
+	padding-top: 25px;
+	width: 600px;
+	margin: auto;
+	font-size: 3.4vh;
+}
+
+.banner-content button {
+	display: block;
+	width: 300px;
+	height: 50px;
+	margin: auto;
+	margin-top: 50px;
+	background-color: transparent;
+	text-shadow: 0.1em 0.01em #111111;
+	border: 2px solid #1da3fa;
+	border-radius: 5px;
+	color: white;
+	font-size: 3.4vh;
+}
+
+#course-content {
+	height: 100vh;
+	border: 2px ridge #539bf5;
+	border-top-width: 0px;
+}
+
+#course-content h2 {
+	width: 63vh;
+	margin: auto;
+	padding-top: 100px;
+	font-size: 6.2vh;
+	color: #1da3fa;
+}
+
+#course-content p {
+	width: 80vh;
+	padding-top: 5vh;
+	font-size: 3.0vh;
+	margin: auto;
+}
+
+.modules-list {
+	width: 90vh;
+	margin: auto;
+	margin-top: 5vh;
+	font-size: 3.4vh;
+}
+
+.modules-list .module {
+	border: 2px ridge #1da3fa;
+	padding: 10px 10px;
+	margin-top: 10vh;
+	background-color: #252525;
+	text-align: center;
+	border-radius: 50px 50px;
+}
+
+
+.modules-list span{
+	color: #1da3fa;
+}
+
+.transform-world {
+	height: 100vh;
+	background-image: url("../images/men-coding.jpg");
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.transform-world p {
+	font-size: 5vh;
+	padding-top: 35vh;
+	padding-left: 5vh;
+	text-shadow: 0.10em 0.02em #1da3fa;
+}
+
+.evolution {
+	height: 100vh;
+	background-image: linear-gradient(rgb(25,25,25), rgba(0,0,0,0.534), rgba(0,0,0,0.986)),
+ url("../images/opotimg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 2px ridge #1da3fa;
+}
+
+.evolution h2, .evolution p {
+	font-size: 5vh;
+	padding-top: 20vh;
+	padding-left: 12vh;
+	color: white;
+}
+
+.evolution p {
+	font-size: 3.5vh;
+	width: 60%;
+}
+
+footer {
+	border: 2px ridge #1da3fa;
+	text-align: center;
+}
+
+footer img {
+	width: 25vh;
+}
+
+footer p {
+	font-size: 3vh;
+	text-shadow: 30px 30px red;
+}
+
+a {
+	color: #1da3fa;
+	text-decoration: none;
+}
