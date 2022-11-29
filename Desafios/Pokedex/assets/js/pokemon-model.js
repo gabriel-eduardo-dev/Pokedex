@@ -11,4 +11,5 @@ class Pokemon {
 	spd;
 	photo;
 	about;
+	weakness = [];
 }

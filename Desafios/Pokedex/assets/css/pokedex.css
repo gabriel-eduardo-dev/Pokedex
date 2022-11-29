@@ -85,6 +85,7 @@
     margin: .5rem;
     padding: 1rem 0.5rem;
     border-radius: 1rem;
+	box-shadow: 1px 1px 50px black;
 }
 
 .pokemon .number {
@@ -145,49 +146,42 @@
 }
 
 .pokemon .data .about {
+	height: 70px;
 	font-size: 0.825rem;
 	opacity: 0.5;
+	padding-top: .6rem;
+	overflow: clip;
+	text-overflow: ellipsis;
 }
 
 .pokemon .container {
-	padding-top: 1rem;
+	padding-top: .8rem;
 	display: flex;
 	flex-direction: row;
 }
 
-.pokemon .container span {
-	opacity: 0.85;
-	width: 4rem;
+.pokemon .container span:first-child {
+	width: 3rem;
+	opacity: 0.8;
+}
+
+.pokemon .container .value {
+	width: 2rem;
+	opacity: 0.5;
 }
 
 .pokemon .container .skills {
 	border-radius: 1rem;
 	height: 0.7rem;
+	margin-top: .1rem;
+	max-width: 55%;
+	text-align: center;
+	font-size: 0.825rem;
 }
 
-.pokemon .container .HP {
-	width: 35%;
-}
-
-.pokemon .container .ATK {
-	width: 15%;
-}
-
-.pokemon .container .DEF {
-	width: 45%;
-}
-
-.pokemon .container .SATK {
-	width: 75%;
-}
-
-.pokemon .container .SDEF {
-	width: 20%;
-}
-
-
-.pokemon .container .SPD {
-	width: 60%;
+.pokemon .data .weakness {
+	padding-top: 1rem;
+	opacity: 0.8;
 }
 
 @media screen and (min-width: 380px) {

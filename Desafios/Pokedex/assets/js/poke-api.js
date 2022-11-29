@@ -18,17 +18,33 @@ async function convert_pokeApi_to_pokemon(poke_detail) {
 	pokemon.atk = stats[1];
 	pokemon.def = stats[2];
 	pokemon.satk = stats[3];
-	pokemon.spd = stats[4];
+	pokemon.sdef = stats[4];
 	pokemon.spd = stats[5];
 
-	fetch(poke_detail.species.url)
+	await fetch(poke_detail.species.url)
 		.then((response) => response.json())
 		.then((detail) => {
-			const texts = detail.flavor_text_entries.map((text) => text.flavor_text);
-			pokemon.about = texts[0];
+			detail.flavor_text_entries.map((text) => {
+				if (text.language.name === 'en') {
+					pokemon.about = text.flavor_text;
+				}
+			});
 		})
-	return pokemon;
 
+	let weaks = [];
+
+	await fetch(poke_detail.types[0].type.url)
+		.then((response) => response.json())
+		.then((weakness) => weaks = weakness.damage_relations.double_damage_from.map((weak) => weak.name))
+
+	for (let i = 0; i < weaks.length; i++) {
+		pokemon.weakness[i] = weaks[i];
+		if (i === 1) {
+			break;
+		}
+	}
+
+	return pokemon;
 }
 
 poke_api.get_pokemon_detail = (pokemon) => {
