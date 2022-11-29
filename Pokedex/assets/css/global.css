@@ -4,16 +4,14 @@
 }
 
 body {
-    background-color: #292929;
 	color: white;
+	background-color: #202020;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #292929;
-	border-radius: 25px;
 }
 
 @media screen and (min-width: 992px) {

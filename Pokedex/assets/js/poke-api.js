@@ -1,8 +1,8 @@
 const poke_api = {};
 
-function convert_pokeApi_to_pokemon(poke_detail) {
+async function convert_pokeApi_to_pokemon(poke_detail) {
 	const pokemon = new Pokemon();
-	pokemon.number = poke_detail.id;
+	pokemon.id = poke_detail.id;
 	pokemon.name = poke_detail.name;
 
 	const types = poke_detail.types.map((typeSlot) => typeSlot.type.name);
@@ -13,6 +13,20 @@ function convert_pokeApi_to_pokemon(poke_detail) {
 
 	pokemon.photo = poke_detail.sprites.other.dream_world.front_default;
 
+	const stats = poke_detail.stats.map((stat) => stat.base_stat);
+	pokemon.hp = stats[0];
+	pokemon.atk = stats[1];
+	pokemon.def = stats[2];
+	pokemon.satk = stats[3];
+	pokemon.spd = stats[4];
+	pokemon.spd = stats[5];
+
+	fetch(poke_detail.species.url)
+		.then((response) => response.json())
+		.then((detail) => {
+			const texts = detail.flavor_text_entries.map((text) => text.flavor_text);
+			pokemon.about = texts[0];
+		})
 	return pokemon;
 
 }
