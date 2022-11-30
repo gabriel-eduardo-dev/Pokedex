@@ -1,8 +1,8 @@
 const pokemon_list_id = document.getElementById('pokemonList');
-const limit = 152;
+const limit = 8;
 let offset = 0;
 
-const max_records = 9;
+const max_records = 152;
 const max_width = 55;
 
 function load_more_pokemons(offset, limit) {
