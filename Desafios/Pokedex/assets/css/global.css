@@ -6,6 +6,10 @@
 body {
 	color: white;
 	background-color: #202020;
+    background: linear-gradient(rgb(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)), url(https://i0.wp.com/www.gamerfocus.co/wp-content/uploads/2019/06/pokemon_collage.jpg?w=1336&ssl=1);
+	background-size: 100vh;
+	display: flex;
+	justify-content: center;
 }
 
 .content {
